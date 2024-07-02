@@ -19,7 +19,11 @@ public:
 	UPROPERTY()
 	TObjectPtr<UAuraUserWidget> OverlayWidget;
 
+protected:
+	virtual void BeginPlay() override;
+
 private:
 
+	UPROPERTY(EditAnywhere)
 	TSubclassOf<UAuraUserWidget> OverlayWidgetClass;
 };
